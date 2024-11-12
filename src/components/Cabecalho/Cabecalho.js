@@ -8,7 +8,6 @@ export function Cabecalho() {
       <Image 
         source={require('../../../assets/logo.jpg')}
         style={styles.logo}
-        resizeMode="contain"
       />
     </View>
   );

@@ -1,22 +1,24 @@
 import React from 'react';
-import { View, TextInput } from 'react-native';
-import styles from './styles'; 
-import { Cabecalho } from '../Cabecalho';
-import { Rodape } from '../Rodape';
+import { View, TextInput, Image } from 'react-native';
+import styles from './styles';
+import { Card } from '../Card';
 
 export function Cabecalho_Pesquisa({ navigation }) {
   return (
     <View style={styles.container}>
-      <Cabecalho />
-      <View style={styles.searchContainer}>
-        <TextInput
-          style={styles.input}
-          placeholder="Pesquise por um estabelecimento ou produto..."
-          placeholderTextColor="#888"
-        />
-      </View>
-      <View style={{ flex: 3 }} /> 
-      <Rodape navigation={navigation} />
+      <Image 
+        source={require('../../../assets/logo.jpg')}
+        style={styles.logo}
+      />
+      <TextInput
+        style={styles.input}
+        placeholder="Pesquise por um produto ou estabelecimento..."
+        placeholderTextColor="#888"
+      />
+
     </View>
   );
 }
+<View style={styles.cardContainer}>
+<Card navigation={navigation} />
+</View>

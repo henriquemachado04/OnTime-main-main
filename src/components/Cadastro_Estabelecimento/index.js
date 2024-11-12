@@ -1,1 +1,1 @@
-export { default as Cadastro_Estabelecimento } from './Cadastro_Estabelecimento';
+export * from "./Cadastro_Estabelecimento"

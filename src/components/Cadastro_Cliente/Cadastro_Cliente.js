@@ -1,25 +1,24 @@
 import React from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 import styles from './styles';
-import { Cabecalho } from '../Cabecalho';
-import { Rodape } from '../Rodape';
+import { TouchableOpacity } from 'react-native';
 
-function Cadastro_Cliente({ navigation }) {
+export function Cadastro_Cliente({ navigation }) {
   return (
     <View style={styles.container}>
-      <Cabecalho />
       <Text style={styles.title}>Cadastro de Cliente</Text>
-      <TextInput placeholder="Nome Completo" style={styles.input} />
-      <TextInput placeholder="CPF" style={styles.input} keyboardType="numeric" />
-      <TextInput placeholder="Telefone" style={styles.input} keyboardType="phone-pad" />
-      <TextInput placeholder="E-mail" style={styles.input} keyboardType="email-address" />
-      <TextInput placeholder="Estado" style={styles.input} />
-      <TextInput placeholder="Cidade" style={styles.input} />
-      <Button title="Selecionar arquivo para upload" onPress={() => {}} />
-      <Button title="Cadastrar" color="#f4511e" onPress={() => {}} />
-      <Rodape navigation={navigation} />
+      <View style={styles.divisoria}></View>
+      <View style={styles.content}>
+        <Text style={styles.label}>Nome Completo</Text>
+        <TextInput style={styles.input} />
+        <Text style={styles.label}>Data de Nascimento</Text>
+        <TextInput style={styles.input} keyboardType="numeric" />
+        <Text style={styles.label}>Telefone</Text>
+        <TextInput style={styles.input} keyboardType="phone-pad" />
+        <Text style={styles.label}>CPF</Text>
+        <TextInput style={styles.input} keyboardType="numeric" />
+      </View>
+      <TouchableOpacity style={styles.cadastrar} onPress={() => navigation.navigate('Index')}>Cadastrar</TouchableOpacity>
     </View>
   );
 }
-
-export default Cadastro_Cliente;

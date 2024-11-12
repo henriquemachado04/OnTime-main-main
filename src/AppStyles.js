@@ -1,6 +1,12 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+  index: {
+    flex: 1,
+    backgroundColor: '#ff4400',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -24,8 +30,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   carrinho: {
+    position: 'absolute',
     flexDirection: 'row',
     justifyContent: 'flex-end',
+  },
+  usuario: {
+    position: 'relative',
   },
   cards: {
     alignItems: "center",

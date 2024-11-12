@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 import styles from './styles';
 
-export function Carrinho() {
+export function Carrinho({ navigation }) {
   return (
     <View style={styles.container}>
-      <Image source={require('../../../assets/carrinho.png')} style={styles.carrinho} />
+      <TouchableOpacity onPress={() => navigation.navigate('Carrinhos')}>
+        <Image source={require('../../../assets/carrinho.png')} style={styles.carrinho} />
+      </TouchableOpacity>
     </View>
   );
 }

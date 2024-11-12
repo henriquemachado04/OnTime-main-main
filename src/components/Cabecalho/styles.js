@@ -2,13 +2,14 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    width: '100%',           // Certifica que ocupa toda a largura da tela
+    height: 100,             // Define a altura do cabeçalho
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center',    // Centraliza o conteúdo horizontalmente
   },
   logo: {
-    width: 200,
-    height: 80,
+    width: 140,
+    height: 60,
   },
 });
 
