@@ -15,6 +15,7 @@ import { Menu_Cadastro_Conteudo } from './src/components/Menu_Cadastro_Conteudo'
 import { Cadastro_Estabelecimento } from './src/components/Cadastro_Estabelecimento';
 import { IndexTela } from './src/components/Index/IndexTela';
 import { Usuario } from './src/components/Usuario';
+import { Login } from './src/components/Login';
 
 const Stack = createNativeStackNavigator();
 
@@ -36,6 +37,17 @@ function App() {
       </Stack.Navigator>
     </NavigationContainer>
   );
+}
+
+function Login({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <Cadastro_Cliente navigation={navigation}/>
+    </View>
+  )
 }
 
 function Index({ navigation }) {
